@@ -1,0 +1,39 @@
+version: "2"
+services:
+  testerdb:
+    container_name: tester_db
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: D12AfJ_tester
+      MYSQL_USER: tester_user
+      MYSQL_PASSWORD: testerpass
+  testerphpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: tester_phpmyadmin
+      ports:
+        - "8008:80"
+      links:
+        - testerdb:mysql
+      environment:
+        - PMA_HOST=mysql
+  testerwp:
+    depends_on:
+      - testerdb
+    container_name: tester_wp
+    image: wordpress:latest
+    volumes:
+      - ../wordpress:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    ports:
+      - "8080:80"
+    links:
+      - testerdb:mysql
+    environment:
+      WORDPRESS_DB_NAME: D12AfJ_tester
+      WORDPRESS_DB_HOST: testerdb:3306
+      WORDPRESS_DB_USER: tester_user
+      WORDPRESS_DB_PASSWORD: testerpass
+      WORDPRESS_TABLE_PREFIX: wp_eE1HF_
