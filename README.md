@@ -21,7 +21,7 @@ PHPMyAdmin --> localhost:8008
 
 The SQL file is in folder db, in root path.
 
-Info to phpmyadmin acces:
+Wordpress credentials, is in file info.txt in wordpress folder. The next info is to phpmyadmin access.
 
 ```
 user: tester_user
