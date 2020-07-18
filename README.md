@@ -13,10 +13,11 @@ To run docker, you need enter the folder Docker in the root path of project. Ple
 docker-compose up -d
 ```
 
-After that, just you have to import the SQL backup via PHPMyAdmin, here is the URL:
+After that, just you have to import the SQL backup via PHPMyAdmin, here is the URLs:
 
 ```
-PHPMyAdmin --> localhost:8008
+PHPMyAdmin - localhost:8008
+Site - localhost:8080
 ```
 
 The SQL file is in folder db, in root path.
