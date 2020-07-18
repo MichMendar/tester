@@ -21,12 +21,13 @@ PHPMyAdmin --> localhost:8008
 
 The SQL file is in folder db, in root path.
 
+Info to phpmyadmin acces:
+
 ```
 user: tester_user
 pass: testerpass
+
 ```
-
-
 
 ## Install theme dependencies
 
