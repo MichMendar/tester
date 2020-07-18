@@ -1,0 +1,29 @@
+// ------ Breakpoints -------
+$mq-breakpoints: (
+    mobile:  460px,
+    tablet: 980px,
+    large: 1200px,
+);
+
+// ------ Container Size -------------
+$containerMaxWidth: 1140px;
+$containerPadding: 30px;
+
+// ------ Colors -------------
+
+$grey:          #929292 !default;
+$pinkPrimary:   #fbaac2 !default;
+$pinkSecundary: #ffced4 !default;
+$greenLight:      #b7d4d2 !default;
+$borderPrimary:     #acd9cc !default;
+$white:         #ffffff  !default;
+$black:         #000000  !default;
+$linkHover:     #f79420 !default;
+$dark:          #232323 !default;
+$greyLight:     #b0b0b0 !default;
+
+// ------ Fonts -------
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Satisfy', cursive;
+
+

@@ -1,0 +1,56 @@
+$section: '.sidebar__form';
+
+#{$section} {
+    color: $white;
+    background-color: $pinkPrimary;
+    padding: 30px 20px;
+    border-radius: 9px;
+    /*width: 100%;
+    max-width: 23.33%;
+    position: fixed;
+    overflow-x: hidden;*/
+
+    @include mq($until: mobile) {
+        max-width: 100%;
+    }
+
+
+    h3 {
+        color: $white;
+        margin-bottom: 1em;
+    }
+
+    &-policy {
+        align-self: center;
+        color: $white;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+
+    &-link {
+        text-decoration: underline;
+        color: $white;
+        font-size: 14px;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &-submit {
+        max-width: 100%;
+        width: 100%;
+        white-space: normal;
+    }
+
+    &-succes {        
+        text-align: center;
+        padding: 0 1rem;
+
+        h4 {
+            color: $white;
+            font-size: 18px;
+        }
+    }
+}

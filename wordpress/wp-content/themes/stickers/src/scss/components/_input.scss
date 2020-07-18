@@ -1,0 +1,19 @@
+$component: '.input';
+
+#{$component} {
+    appearance: none;
+    background-color: $pinkSecundary;
+    border: 1px solid $pinkSecundary;
+    border-radius: 5px;
+    height: 55px;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+    outline: none;
+    padding: 0 1.5rem;
+    width: 100%;
+    color: $white;
+
+    &::placeholder {
+        color: $white;
+    }
+}

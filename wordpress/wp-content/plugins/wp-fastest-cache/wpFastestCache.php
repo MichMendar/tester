@@ -3,7 +3,7 @@
 Plugin Name: WP Fastest Cache
 Plugin URI: http://wordpress.org/plugins/wp-fastest-cache/
 Description: The simplest and fastest WP Cache system
-Version: 0.9.0.7
+Version: 0.9.0.8
 Author: Emre Vona
 Author URI: http://tr.linkedin.com/in/emrevona
 Text Domain: wp-fastest-cache
@@ -193,7 +193,7 @@ GNU General Public License for more details.
 					add_action('init', array($this, "create_preload_cache"), 11);
 				}
 
-				if(isset($_GET) && isset($_GET["type"]) && preg_match("/^clearcache(andminified)*$/i", $_GET["type"])){
+				if(isset($_GET) && isset($_GET["type"]) && preg_match("/^clearcache(andminified|allsites)*$/i", $_GET["type"])){
 					// /?action=wpfastestcache&type=clearcache&token=123
 					// /?action=wpfastestcache&type=clearcacheandminified&token=123
 
@@ -210,6 +210,10 @@ GNU General Public License for more details.
 
 								if($_GET["type"] == "clearcacheandminified"){
 									$this->deleteCache(true);
+								}
+
+								if($_GET["type"] == "clearcacheallsites"){
+									$this->wpfc_clear_cache_of_allsites_callback();
 								}
 
 								die("Done");
@@ -749,7 +753,9 @@ GNU General Public License for more details.
 				@rename($file, $this->getWpContentDir("/cache/tmpWpfc/").basename($file)."-".time());
 			}
 
-			die(json_encode(array("The cache of page has been cleared","success")));
+			if (is_admin() && defined('DOING_AJAX') && DOING_AJAX){
+				die(json_encode(array("The cache of page has been cleared","success")));
+			}
 		}
 
 		public function delete_current_page_cache(){

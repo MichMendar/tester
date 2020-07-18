@@ -1,0 +1,51 @@
+$component: '.btn';
+
+#{$component} {
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 55px;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s;
+    padding: 13px 36px;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    width: fit-content;
+    outline: none;
+
+    &--primary {
+        line-height: 1.3em;
+        font-weight: 600;
+        color:  $white;
+        background-color: $pinkPrimary;
+        border: 1px solid $borderPrimary;
+
+
+        &:hover {
+            font-weight: 300;
+            background-color: $greenLight;
+            border: 1px solid $greenLight;
+            font-weight: 700;
+        }
+    }
+
+    &--secondary {
+
+        line-height: 1.3em;
+        font-weight: 300;
+        color:  $black;
+        background-color: $white;
+        border: 1px solid $white;
+
+        &:hover {
+            color:  $white;
+            background-color: $pinkSecundary;
+            border: 1px solid $white;
+            font-weight: 700;
+        }
+    }
+}

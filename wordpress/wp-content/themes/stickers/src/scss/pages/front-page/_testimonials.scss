@@ -1,0 +1,51 @@
+$section: '.testimonials';
+
+#{$section} {
+    &__header {
+        h2 {
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: $secondary-font;
+            font-size: 40px;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    &__author-image {        
+        margin-right: 2rem;
+        max-width: 90px;
+
+        img {
+            border-radius: 100%;
+        }
+    }
+
+    &__author-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        color: $black;
+    }
+
+    &__author-name {
+        font-weight: 700;
+    }
+
+    &__author-job {
+        color: $greenLight;
+    }
+
+}

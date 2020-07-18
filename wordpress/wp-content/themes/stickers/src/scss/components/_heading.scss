@@ -1,0 +1,35 @@
+h1 {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $black;
+    font-size: 37px;
+    line-height: 1.3em;
+
+    @include mq($until: mobile) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $black;
+    font-size: 25px;
+    line-height: 1.3em;
+}
+
+h3 {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $black;
+    font-size: 25px;
+    line-height: 1.3em;
+}
+
+h4 {
+    font-family: $primary-font;
+    font-weight: 600;
+    color: $black;
+    font-size: 19px;
+    line-height: 1.3em;
+}

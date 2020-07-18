@@ -1,0 +1,55 @@
+$layout: '.column';
+
+#{$layout} {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--2 {
+        max-width: 50%;
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &--3-2 {
+        max-width: 66.66%;
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &--3-2-space {
+        max-width: 62.66%;
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+    
+    &--3 {
+        max-width: calc(100%/3);
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &--4-3 {
+        max-width: 75%;
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &--4 {
+        max-width: 25%;
+
+        @include mq($until: mobile) {
+            max-width: 100%;
+        }
+    }
+}

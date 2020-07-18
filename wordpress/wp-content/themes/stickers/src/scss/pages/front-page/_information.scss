@@ -1,0 +1,38 @@
+$section: '.information';
+
+#{$section} {
+    &__header {
+        margin-bottom: 2rem;
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .counter {
+            color: $pinkPrimary;
+        }
+
+        .column {
+            &:first-child {
+                @include mq($until: tablet) {
+                    max-width: 100% !important;
+                }
+            }
+            &:last-child {
+                @include mq($until: tablet) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__sticker {
+        p {
+            font-size: 14px;
+        }
+    }
+}

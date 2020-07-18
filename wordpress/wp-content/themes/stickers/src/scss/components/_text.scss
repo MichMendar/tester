@@ -1,0 +1,45 @@
+p {
+    font-family: $primary-font;
+    color: $grey;
+    font-size: 16px;
+    line-height: 1.7em;
+}
+
+a {
+    font-family: $primary-font;
+    color: $grey;
+    font-size: 16px;
+    line-height: 1.7em;
+
+    &:hover {
+        color: $linkHover;
+    }
+}
+
+.pre-title {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $grey;
+    font-size: 14px;
+    line-height: 1.7em;
+
+    &--dark {
+        color: $dark;
+    }
+}
+
+.top-title {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $dark;
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+.sub-text {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $greyLight;
+    font-size: 1px;
+    line-height: 1.7em;
+}

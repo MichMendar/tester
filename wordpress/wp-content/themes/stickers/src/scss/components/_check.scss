@@ -1,0 +1,49 @@
+$component: '.check';
+
+#{$component} {
+    &__wrapper {
+        appearance: none;
+        background-color: $white;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        height: 14px;
+        position: relative;
+        max-width: 14px;
+        width: 100%;
+        user-select: none;
+    }
+
+    &__input {
+        cursor: pointer;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        width: 0;
+
+        &:checked ~ #{$component}__mask:after {
+            display: block;
+        }
+    }
+
+    &__mask {
+        left: 0;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        width: 14px;
+
+        &:after {
+            border: solid $grey;
+            border-width: 0 2px 2px 0;
+            display: none;
+            content: "";
+            height: 8px;
+            left: 4px;
+            position: absolute;
+            top: 1px;
+            transform: rotate(45deg);
+            width: 4px;
+        }
+    }
+}
