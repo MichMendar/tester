@@ -107,8 +107,8 @@ typings/
 .nuxt
 dist/*
 !dist/images/
-!dist/js/sticky-sidebar.js
-!dist/js/jquery.sticky-sidebar.js
+!dist/js/
+dist/js/main.min.js
 
 # Gatsby files
 .cache/
