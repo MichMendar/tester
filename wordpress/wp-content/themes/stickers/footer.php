@@ -3,7 +3,7 @@
         <div class="footer__container container">
             <div class="footer__row row">
                 <div class="footer__column column">
-                    <small class="footer__text"><?= get_field('global_copyright', 'option') ? get_field('global_copyright', 'option') : __('© Copyright bloggers-love-stickers.com - Show with love who you are ❤️', 'thikin-smart'); ?></small>
+                    <small class="footer__text"><?= get_field('global_copyright', 'option') ? get_field('global_copyright', 'option') : __('© Copyright bloggers-love-stickers.com - Show with love who you are ❤️', 'bls_theme'); ?></small>
                 </div>
                 <div class="footer__column column">
                     <?php
